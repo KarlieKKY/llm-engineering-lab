@@ -9,5 +9,17 @@ dependencies = [
     "openai>=2.16.0",
     "openai-whisper>=20250625",
     "python-dotenv>=1.2.1",
-    "torch>=2.10.0",
+    "torch>=2.4.0",
+    "torchvision",
+    "torchaudio",
 ]
+
+[[tool.uv.index]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cuda" }
+torchvision = { index = "pytorch-cuda" }
+torchaudio = { index = "pytorch-cuda" }
